@@ -4,9 +4,8 @@
   "description": "for HCI-2023",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js",
-    "debug": "ndb server.js"
+    "start": "node server.js",
+    "dev": "nodemon --inspect server.js"
   },
   "author": "",
   "license": "ISC",
