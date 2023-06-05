@@ -25,6 +25,8 @@ const app = express();
 // Add headers before the routes are defined
 app.use(cors({
   origin: 'https://hci-project-fe-vukhanh1209.vercel.app',
+  // origin: 'https://localhost:3001/',
+
     methods: ["POST", "GET", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
