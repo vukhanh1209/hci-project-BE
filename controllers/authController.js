@@ -111,11 +111,11 @@ exports.sendMailVerify = catchAsync(async (req, res, next) => {
   channel.password = undefined;
   console.log(verifyToken);
   try {
-    // await sendEmail({
-    //   email: channel.email,
-    //   subject: "verify channel",
-    //   message,
-    // });
+    await sendEmail({
+      email: channel.email,
+      subject: "verify channel",
+      message,
+    });
     res.status(201).json({
       data: {
         user: channel,
@@ -137,11 +137,11 @@ const sendVerifyToken = async (channel, statusCode, res, req) => {
   channel.password = undefined;
   console.log(verifyToken);
   try {
-    // await sendEmail({
-    //   email: channel.email,
-    //   subject: "verify channel",
-    //   message,
-    // });
+    await sendEmail({
+      email: channel.email,
+      subject: "verify channel",
+      message,
+    });
     res.status(statusCode).json({
       data: {
         user: channel,
@@ -328,11 +328,11 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   const message = `Bạn quên mật khẩu? Mã xác nhận của bạn: ${resetToken}.\nĐổi mật khẩu mới tại : ${resetURL}.\nNếu không phải bạn, vui lòng bỏ qua email này!`;
 
   try {
-    // await sendEmail({
-    //   email: channel.email,
-    //   subject: "Your password reset token (valid for 10 min)",
-    //   message,
-    // });
+    await sendEmail({
+      email: channel.email,
+      subject: "Your password reset token (valid for 10 min)",
+      message,
+    });
 
     res.status(201).json({
       status: "success",
