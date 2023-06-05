@@ -23,13 +23,13 @@ const watchHistoryRouter = require("./routes/watchHistoryRoutes");
 
 const app = express();
 // Add headers before the routes are defined
-app.use(
-  cors({
-    origin: "https://hci-project-fe-vukhanh1209.vercel.app/",
-    methods: ["POST", "GET", "PUT", "PATCH", "DELETE"],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://hci-project-fe-vukhanh1209.vercel.app/",
+//     methods: ["POST", "GET", "PUT", "PATCH", "DELETE"],
+//     credentials: true,
+//   })
+// );
 // Serving static files
 // 1) GLOBAL MIDDLEWARE
 // Set security HTTP headers
